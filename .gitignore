@@ -1,0 +1,13 @@
+logs
+target
+pom.xml
+*.jar
+*.class
+.lein-deps-sum
+.lein-failures
+.lein-plugins
+.lein-repl-history
+*.iml
+*.ipr
+*.iws
+.DS_Store
