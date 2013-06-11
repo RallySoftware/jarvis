@@ -20,7 +20,6 @@ of message command.
 The Jarvis jar file includes a bot namespace which exposes an init function. This will spin up a new thread pool with a specified number of threads and connect to the flows that he has been invited to.
 
 For example -
-
 ```clojure
 (ns my-jarvis.core
     (:require [jarvis.bot :as jarvis]))
@@ -28,6 +27,13 @@ For example -
 (defn -main []
   (jarvis/init))
 ```
+
+## Environment Variables
+```bash
+export FLOWDOCK_TOKEN=<user flowdock token>
+export THREAD_POOL_SIZE=<number of threads to give jarvis -- defaults to 100>
+```
+Your FlowDock token is located on the account page. https://www.flowdock.com/account/tokens
 
 ## How is Jarvis different from Hubot.
 
@@ -216,21 +222,12 @@ The Jarvis core is written in Clojure, so you will need to install
 commands to start Jarvis and try out your plugin.
 
 ```
-> export FLOWDOCK_TOKEN="<insert flowdock user token here>"
 > lein run
 ```
-Your FlowDock token is located on the account page. https://www.flowdock.com/account/tokens
 
 ## TODO
-
-* Log some of the things
-  * ~~Plugin discovery and registration~~ - Currently everything is logged to STDOUT.
-  * ~~Incoming messages (at least in debug mode)~~ ```(listen-and-reply true)```
-* Prefetch users so that Jarvis warms up faster
-* ~~Treat the stream of messages like a infinite sequence. I think this will make it easier to play with messages in the repl.~~
 * Add support for JavaScript/CoffeeScript plugins
 * ~~Add a better way to start Jarvis. Maybe just a script at the root of the project.~~
-* Add support for different plugin directories that are outside of the project.
 
 ## Why the name Jarvis?
 
@@ -239,15 +236,10 @@ See [http://ironman.wikia.com/wiki/J.A.R.V.I.S.](http://ironman.wikia.com/wiki/J
 ## Dependencies
 ```clojure
 [org.clojure/clojure "1.5.0"]
-[com.rallydev/clj-flowdock "1.1.0"]
-[org.codehaus.groovy/groovy-all "2.1.0"]
-[org.clojure/java.classpath "0.2.0"]
-[org.clojure/tools.logging "0.2.6"]
-[clj-http "0.7.2"]
-[fs "1.3.2"]
+[com.rallydev/jarvis-core "1.0.0"]
+[netty-ring-adapter "0.2.4"]
 [ch.qos.logback/logback-classic "1.0.9"]
 [compojure "1.1.3"]
-[netty-ring-adapter "0.2.4"]
 ```
 
 # License
