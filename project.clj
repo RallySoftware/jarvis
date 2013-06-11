@@ -4,7 +4,7 @@
   :license {:name "The MIT License (MIT)"
             :url "http://opensource.org/licenses/MIT"}
   :dependencies [[org.clojure/clojure "1.5.0"]
-                 [com.rallydev/jarvis-core "1.0.0"]
+                 [com.rallydev/jarvis-core "1.1.0"]
                  [netty-ring-adapter "0.2.4"]
                  [ch.qos.logback/logback-classic "1.0.9"]
                  [compojure "1.1.3"]]
