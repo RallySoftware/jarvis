@@ -1,12 +1,12 @@
 # Jarvis
 
-A FlowDock robot similar to [Hubot](http://hubot.github.com/).
+A Flowdock robot similar to [Hubot](http://hubot.github.com/).
 
 ## Why not just use Hubot?
 
-I think Jarvis can take advantage of the full power of FlowDock. Context. Think of all those build messages that get
-sent to FlowDock. Wouldn't it be nice if you could reply to those messages and have Jarvis do work for you. Reply to
-a failed build message in FlowDock with:
+I think Jarvis can take advantage of the full power of Flowdock. Context. Think of all those build messages that get
+sent to Flowdock. Wouldn't it be nice if you could reply to those messages and have Jarvis do work for you. Reply to
+a failed build message in Flowdock with:
 
 ```
 ~claim portfolio_item/bulk_edit_spec.rb failed again
@@ -33,15 +33,15 @@ For example -
 export FLOWDOCK_TOKEN=<user flowdock token>
 export THREAD_POOL_SIZE=<number of threads to give jarvis -- defaults to 100>
 ```
-Your FlowDock token is located on the account page. https://www.flowdock.com/account/tokens
+Your Flowdock token is located on the account page. https://www.flowdock.com/account/tokens
 
 ## How is Jarvis different from Hubot.
 
 * Jarvis works on the JVM.
 * Plugins can currently be created with Groovy, Java and Clojure. It should be easy to add support for other JVM languages too.
-* Jarvis only works with FlowDock
-* Jarvis is developed in a more functional style. (full FlowDock message) -> (response)
-* Jarvis is designed to take full advantage of FlowDock context.
+* Jarvis only works with Flowdock
+* Jarvis is developed in a more functional style. (full Flowdock message) -> (response)
+* Jarvis is designed to take full advantage of Flowdock context.
 * Jarvis can be used in private flows.
 * Jarvis can be invited to flows, and be asked to leave.
 
@@ -75,15 +75,15 @@ Bot.addCommand("hello", "Simple Hello", "Adam Esterline") { message ->
 }
 ```
 
-## What information does a FlowDock message contain?
+## What information does a Flowdock message contain?
 
-FlowDock has a pretty good [API](https://www.flowdock.com/api/). But... with any documentation, it is not perfect.
+Flowdock has a pretty good [API](https://www.flowdock.com/api/). But... with any documentation, it is not perfect.
 I have taken the time to "document" some of the API in the [wiki](https://github.com/RallySoftware/jarvis/wiki).
 
 ## Jarvis specific message information
 
-Jarvis adds information to the basic FlowDock information. This information allows plugin developers to access
-FlowDock "context" information. Two pieces of information have been altered: ```user, parent```.
+Jarvis adds information to the basic Flowdock information. This information allows plugin developers to access
+Flowdock "context" information. Two pieces of information have been altered: ```user, parent```.
 
 ### user
 

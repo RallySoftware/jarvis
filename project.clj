@@ -1,5 +1,5 @@
 (defproject jarvis "1.0.0"
-  :description "A robot for FlowDock"
+  :description "A robot for Flowdock"
   :url "http://github.com/RallySoftware/jarvis"
   :license {:name "The MIT License (MIT)"
             :url "http://opensource.org/licenses/MIT"}
