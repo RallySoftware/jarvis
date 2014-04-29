@@ -212,8 +212,8 @@ will contain the original message for the comment.
 ## How can I test my plugin?
 
 Take a look at the tests currently written for the
-[existing](https://github.com/RallySoftware/jarvis/tree/master/src/test/clojure/jarvis/plugins)
-[plugins](https://github.com/RallySoftware/jarvis/blob/master/src/test/clojure/jarvis/help_test.clj).
+[existing](https://github.com/RallySoftware/jarvis-core/tree/master/src/test/clojure/jarvis/plugins)
+[plugins](https://github.com/RallySoftware/jarvis-core/blob/master/src/test/clojure/jarvis/plugins/help_test.clj).
 
 ## How do I try out my plugin?
 
